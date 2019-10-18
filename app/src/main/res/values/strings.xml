@@ -2,4 +2,5 @@
     <string name="app_name">RSunFlower</string>
     <string name="my_garden_title">我的花园</string>
     <string name="plant_list_title">可种植的植物</string>
+    <string name="fragment_memory_curve">每日记忆</string>
 </resources>

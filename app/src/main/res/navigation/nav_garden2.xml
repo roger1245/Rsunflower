@@ -2,19 +2,50 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    app:startDestination="@+id/garden_fragment">
+    app:startDestination="@+id/memory_curve_fragment">
     <fragment
         android:id="@+id/garden_fragment"
         android:name="com.rg.rsunflower.GardenFragment"
+        android:label="我的花园"
         tools:layout="@layout/fragment_garden">
         <action
-            android:id="@+id/action_garden_fragment"
-            app:destination="@id/plant_list_fragment"/>
+            android:id="@+id/action_garden_fragment_to_add_edit_habit_fragment"
+            app:destination="@id/add_edit_habit_fragment"/>
     </fragment>
     <fragment
         android:id="@+id/plant_list_fragment"
+        android:label="可种植的植物"
+        android:name="com.rg.rsunflower.PlantListFragment"
         tools:layout="@layout/fragment_plant_list">
 
     </fragment>
+
+    <fragment
+        android:id="@+id/plant_detail_fragment"
+        android:name="com.rg.rsunflower.PlantDetailFragment"
+        tools:layout="@layout/fragment_plant_detail"
+        android:label="植物细节">
+        <argument
+            android:name="plantId"
+            app:argType="string"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/add_edit_habit_fragment"
+        android:name="com.rg.rsunflower.AddEditHabitFragment"
+        tools:layout="@layout/fragment_add_edit_habit"
+        android:label="新的单词">
+
+        <action
+            android:id="@+id/action_add_edit_habit_fragment_to_garden_fragment"
+            app:destination="@id/garden_fragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/memory_curve_fragment"
+        android:name="com.rg.rsunflower.MemoryCurveFragment"
+        tools:layout="@layout/fragment_memory_curve"
+        android:label="每日记忆"/>
+
 
 </navigation>

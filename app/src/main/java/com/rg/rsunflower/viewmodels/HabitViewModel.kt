@@ -33,7 +33,6 @@ class HabitViewModel internal constructor(
             habitRepository.createHabit(habit)
             upDateHabit()
         }
-
     }
 
     fun delete(habitId: Int) {

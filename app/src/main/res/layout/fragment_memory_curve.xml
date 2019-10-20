@@ -2,10 +2,29 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.constraintlayout.motion.widget.MotionLayout
+        android:id="@+id/motionLayout"
+        app:layoutDescription="@xml/memory_curve_scene"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" >
+        android:layout_height="match_parent"
+        app:motionDebug="SHOW_ALL">
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <FrameLayout
+            android:id="@+id/bottomCard"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/design_default_color_primary">
+        </FrameLayout>
+        <FrameLayout
+            android:id="@+id/topCard"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/cardview_shadow_start_color">
+        </FrameLayout>
+
+
+
+    </androidx.constraintlayout.motion.widget.MotionLayout>
 
 </layout>

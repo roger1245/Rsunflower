@@ -14,14 +14,41 @@
             android:id="@+id/bottomCard"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:background="@color/design_default_color_primary">
+            android:background="@color/design_default_color_primary_dark">
+            <TextView
+                android:id="@+id/tv_top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
+
         </FrameLayout>
         <FrameLayout
             android:id="@+id/topCard"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:background="@color/cardview_shadow_start_color">
+            android:background="@color/cardview_dark_background">
+            <TextView
+                android:id="@+id/tv_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
         </FrameLayout>
+
+        <ImageView
+            android:id="@+id/likeIcon"
+            android:src="@drawable/ic_baseline_favorite_border"
+            android:tint="#fbc02d"
+            android:background="@drawable/backround_circle"
+            android:layout_height="0dp"
+            android:layout_width="0dp" />
+
+        <ImageView
+            android:id="@+id/passIcon"
+            android:src="@drawable/ic_baseline_close"
+            android:background="@drawable/backround_circle"
+            android:tint="#e64a19"
+            android:layout_height="0dp"
+            android:layout_width="0dp"/>
 
 
 

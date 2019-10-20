@@ -5,6 +5,7 @@ import com.rg.rsunflower.data.AppDatabase
 import com.rg.rsunflower.data.HabitRepository
 import com.rg.rsunflower.viewmodels.AddEditHabitViewModelFactory
 import com.rg.rsunflower.viewmodels.GardenPlantingListViewModelFactory
+import com.rg.rsunflower.viewmodels.MemoryCurveFactory
 
 /**
  * Create by roger
@@ -26,6 +27,11 @@ object InjectorUtils {
     fun provideAddEditHabitFactory(context: Context): AddEditHabitViewModelFactory {
         val repository = getGardenPlantingRepository(context)
         return AddEditHabitViewModelFactory(repository)
+    }
+
+    fun provideMemoryCurveFactory(context: Context): MemoryCurveFactory {
+        val repository = getGardenPlantingRepository(context)
+        return MemoryCurveFactory(repository)
     }
 
 

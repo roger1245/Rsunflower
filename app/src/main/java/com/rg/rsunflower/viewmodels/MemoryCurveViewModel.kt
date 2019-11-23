@@ -16,27 +16,27 @@ class MemoryCurveViewModel internal constructor(
 ) : ViewModel() {
     var habits: LiveData<List<Habit>> = habitRepository.getHabits()
 
-    var size: Int? = null
+//    var size: Int? = null
+//
+//    val topCardIndex: MutableLiveData<Int> = MutableLiveData()
+//    val bottomCardIndex: MutableLiveData<Int> = MutableLiveData()
 
-    val topCardIndex: MutableLiveData<Int> = MutableLiveData()
-    val bottomCardIndex: MutableLiveData<Int> = MutableLiveData()
-
-    fun upDataIndex() {
-        size?.let {
-            if (it > 1) {
-                val topI = topCardIndex.value
-                val bottomI = bottomCardIndex.value
-                val sizeCopy = size
-
-                if (topCardIndex.value == null) {
-                    topCardIndex.postValue(0)
-                    bottomCardIndex.postValue(1)
-                } else if (bottomI != null && sizeCopy != null && bottomI + 1 < sizeCopy) {
-                    topCardIndex.postValue((topI ?: 0) + 1)
-                    bottomCardIndex.postValue((bottomI ?: 0) + 1)
-                }
-            }
-
-        }
-    }
+//    fun upDataIndex() {
+//        size?.let {
+//            if (it > 1) {
+//                val topI = topCardIndex.value
+//                val bottomI = bottomCardIndex.value
+//                val sizeCopy = size
+//
+//                if (topCardIndex.value == null) {
+//                    topCardIndex.postValue(0)
+//                    bottomCardIndex.postValue(1)
+//                } else if (bottomI != null && sizeCopy != null && bottomI + 1 < sizeCopy) {
+//                    topCardIndex.postValue((topI ?: 0) + 1)
+//                    bottomCardIndex.postValue((bottomI ?: 0) + 1)
+//                }
+//            }
+//        }
+//
+//    }
 }

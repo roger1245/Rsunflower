@@ -2,7 +2,7 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    app:startDestination="@+id/memory_curve_fragment">
+    app:startDestination="@+id/main_fragment">
     <fragment
         android:id="@+id/garden_fragment"
         android:name="com.rg.rsunflower.GardenFragment"
@@ -42,7 +42,7 @@
     </fragment>
 
     <fragment
-        android:id="@+id/memory_curve_fragment"
+        android:id="@+id/main_fragment"
         android:name="com.rg.rsunflower.MemoryCurveFragment"
         tools:layout="@layout/fragment_memory_curve"
         android:label="每日记忆"/>

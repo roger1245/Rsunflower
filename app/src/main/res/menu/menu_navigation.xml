@@ -3,7 +3,7 @@
 
 
     <item
-        android:id="@+id/memory_curve_fragment"
+        android:id="@+id/main_fragment"
         android:title="@string/fragment_memory_curve" />
     <item
         android:id="@+id/garden_fragment"
